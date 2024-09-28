@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+         .wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thank you, {{ name }}!</h1>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Address:</strong> {{ address }}, {{ city }}, {{ state }} - {{ zip_code }}</p>
+    <p><strong>Profession:</strong> {{ profession }}</p>
+    <p><strong>Hobbies:</strong> {{ hobbies | join(', ') }}</p>
+    <p><strong>About Me:</strong> {{ about_me }}</p>
+</div>
+
+</body>
+</html>
